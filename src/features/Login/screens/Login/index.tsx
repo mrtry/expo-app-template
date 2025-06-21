@@ -1,15 +1,19 @@
-import {View, Text, Button} from "react-native";
+import { View } from "react-native";
 import { useRouter} from "expo-router";
+import { Button } from "@/src/components/Button";
+import { Text } from '@/src/components/Text'
 
 export const LoginScreen = () => {
   const router = useRouter()
   return (
     <View>
-      <Text>Login Screen</Text>
+      <Text variant={'bodyMedium'}>Login Screen</Text>
       <Button
-        title={'Navigate to Authed Home'}
+        mode={'text'}
         onPress={() => router.push('/(authed)/home')}
-      />
+      >
+        Navigate to Authed Home
+      </Button>
     </View>
   )
 }

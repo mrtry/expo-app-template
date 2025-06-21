@@ -1,21 +1,19 @@
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
+import {
+  DefaultTheme as NavigationDefaultTheme,
+} from '@react-navigation/native';
+import {
+  MD3LightTheme,
+  adaptNavigationTheme,
+} from 'react-native-paper';
 
-export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-  },
-};
+const { LightTheme } = adaptNavigationTheme({
+  reactNavigationLight: NavigationDefaultTheme,
+});
+
+export const PaperTheme = MD3LightTheme
+export const NavigationTheme = {
+  ...LightTheme,
+  fonts: {
+    ...NavigationDefaultTheme.fonts,
+  }
+}

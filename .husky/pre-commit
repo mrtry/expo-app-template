@@ -1,1 +1,16 @@
-npm test
+# .husky/pre-commit
+
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 1. 依存関係のチェックを実行
+echo "Running dependency check..."
+npm run dep-check
+if [ $? -ne 0 ]; then
+  echo "Dependency check failed! Commit aborted."
+  exit 1
+fi
+
+# 2. lint-staged を実行 (上記が成功した場合のみ)
+echo "Running lint-staged..."
+npx lint-staged

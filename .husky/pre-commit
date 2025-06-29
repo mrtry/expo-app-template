@@ -1,8 +1,5 @@
 # .husky/pre-commit
 
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
 # 1. 依存関係のチェックを実行
 echo "Running dependency check..."
 npm run lint:dependency-graph

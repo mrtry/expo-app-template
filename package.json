@@ -13,7 +13,7 @@
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx,json,css,md}",
     "prepare": "husky",
     "lint:dependency-graph": "depcruise src --config .dependency-cruiser.js",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

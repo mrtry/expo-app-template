@@ -1,4 +1,3 @@
+import { HomeScreen } from '@/features/home/screens/home';
 
-import { HomeScreen } from "@/src/features/Home/screens/Home";
-
-export default HomeScreen
+export default HomeScreen;

@@ -1,11 +1,13 @@
-import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import 'react-native-reanimated';
+import React from 'react';
 import { PaperProvider } from 'react-native-paper';
-import { NavigationTheme, PaperTheme} from "@/src/constants/Colors";
 
-export default function RootLayout() {
+import { NavigationTheme, PaperTheme } from '@/constants/Colors';
+
+export const RootLayout = () => {
   return (
     <PaperProvider theme={PaperTheme}>
       <ThemeProvider value={NavigationTheme}>
@@ -17,4 +19,4 @@ export default function RootLayout() {
       </ThemeProvider>
     </PaperProvider>
   );
-}
+};

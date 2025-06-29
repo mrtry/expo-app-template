@@ -12,7 +12,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write ./**/*.{js,jsx,ts,tsx,json,css,md}",
     "prepare": "husky",
-    "dep-check": "depcruise src --config .dependency-cruiser.js"
+    "lint:dependency-graph": "depcruise src --config .dependency-cruiser.js"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": "eslint --fix",

@@ -5,7 +5,7 @@
 
 # 1. 依存関係のチェックを実行
 echo "Running dependency check..."
-npm run dep-check
+npm run lint:dependency-graph
 if [ $? -ne 0 ]; then
   echo "Dependency check failed! Commit aborted."
   exit 1

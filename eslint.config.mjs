@@ -22,7 +22,20 @@ export default tsLintConfig(
   },
 
   ...expoConfig,
-  perfectionistPlugin.configs['recommended-natural'],
+  {
+    ...perfectionistPlugin.configs['recommended-natural'],
+    rules: {
+      ...perfectionistPlugin.configs['recommended-natural'].rules,
+      'perfectionist/sort-objects': [
+        'error',
+        {
+          type: 'natural',
+          ignoreCase: true,
+          partitionByNewLine: true,
+        },
+      ],
+    },
+  },
 
   // --- メインのカスタム設定 ---
   {
@@ -50,6 +63,7 @@ export default tsLintConfig(
       'react-hooks': reactHooksPlugin,
       'react-native': reactNativePlugin,
       'unicorn': unicornPlugin,
+      'perfectionist': perfectionistPlugin,
     },
     rules: {
       // ESLint Core Rules
@@ -68,6 +82,15 @@ export default tsLintConfig(
       'react/function-component-definition': [
         'error',
         { 'namedComponents': 'arrow-function', 'unnamedComponents': 'arrow-function' }
+      ],
+
+      'perfectionist/sort-objects': [
+        'error',
+        {
+          type: 'natural',
+          ignoreCase: true,
+          partitionByNewLine: true,
+        },
       ],
 
       // eslint-plugin-unicorn

@@ -74,5 +74,5 @@
     "typescript-eslint": "^8.34.1"
   },
   "private": true,
-  "packageManager": "pnpm@10.12.4"
+  "packageManager": "yarn@4.5.1"
 }

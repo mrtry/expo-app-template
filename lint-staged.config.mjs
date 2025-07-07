@@ -1,6 +1,6 @@
 export default {
   '*.{js,jsx,ts,tsx}': [
-    () => 'pnpm typecheck',
+    () => 'yarn typecheck',
     'prettier --write',
     'eslint --fix',
   ],

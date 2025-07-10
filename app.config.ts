@@ -30,7 +30,7 @@ export default (): ExpoConfig => {
     },
 
     extra: {
-      storybookEnabled: !!process.env.STORYBOOK_ENABLED,
+      storybookEnabled: process.env.STORYBOOK_ENABLED === 'true',
     },
     plugins: [
       ['./plugins/withAppVariant.ts', { env: env }],

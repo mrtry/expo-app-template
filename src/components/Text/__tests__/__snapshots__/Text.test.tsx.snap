@@ -1,0 +1,676 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Text Component snapshot 1`] = `
+<RCTScrollView
+  style={
+    {
+      "flex": 1,
+    }
+  }
+>
+  <View>
+    <View
+      style={
+        {
+          "gap": 16,
+          "padding": 16,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "marginBottom": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "textAlign": "left",
+              },
+              {
+                "color": "rgba(28, 27, 31, 1)",
+                "writingDirection": "ltr",
+              },
+              [
+                {
+                  "fontFamily": "System",
+                  "fontSize": 24,
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 32,
+                },
+                {
+                  "marginBottom": 4,
+                },
+              ],
+            ]
+          }
+        >
+          Display Variants
+        </Text>
+        <View
+          style={
+            {
+              "gap": 8,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 57,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 64,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Display Large Text
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 45,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 52,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Display Medium Text
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 36,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 44,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Display Small Text
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "marginBottom": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "textAlign": "left",
+              },
+              {
+                "color": "rgba(28, 27, 31, 1)",
+                "writingDirection": "ltr",
+              },
+              [
+                {
+                  "fontFamily": "System",
+                  "fontSize": 24,
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 32,
+                },
+                {
+                  "marginBottom": 4,
+                },
+              ],
+            ]
+          }
+        >
+          Headline Variants
+        </Text>
+        <View
+          style={
+            {
+              "gap": 8,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 32,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 40,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Headline Large Text
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 28,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 36,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Headline Medium Text
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 24,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 32,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Headline Small Text
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "marginBottom": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "textAlign": "left",
+              },
+              {
+                "color": "rgba(28, 27, 31, 1)",
+                "writingDirection": "ltr",
+              },
+              [
+                {
+                  "fontFamily": "System",
+                  "fontSize": 24,
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 32,
+                },
+                {
+                  "marginBottom": 4,
+                },
+              ],
+            ]
+          }
+        >
+          Title Variants
+        </Text>
+        <View
+          style={
+            {
+              "gap": 8,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 22,
+                    "fontWeight": "400",
+                    "letterSpacing": 0,
+                    "lineHeight": 28,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Title Large Text
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": "500",
+                    "letterSpacing": 0.15,
+                    "lineHeight": 24,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Title Medium Text
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "letterSpacing": 0.1,
+                    "lineHeight": 20,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Title Small Text
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "marginBottom": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "textAlign": "left",
+              },
+              {
+                "color": "rgba(28, 27, 31, 1)",
+                "writingDirection": "ltr",
+              },
+              [
+                {
+                  "fontFamily": "System",
+                  "fontSize": 24,
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 32,
+                },
+                {
+                  "marginBottom": 4,
+                },
+              ],
+            ]
+          }
+        >
+          Label Variants
+        </Text>
+        <View
+          style={
+            {
+              "gap": 8,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 14,
+                    "fontWeight": "500",
+                    "letterSpacing": 0.1,
+                    "lineHeight": 20,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Label Large Text
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 12,
+                    "fontWeight": "500",
+                    "letterSpacing": 0.5,
+                    "lineHeight": 16,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Label Medium Text
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 11,
+                    "fontWeight": "500",
+                    "letterSpacing": 0.5,
+                    "lineHeight": 16,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Label Small Text
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "marginBottom": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "textAlign": "left",
+              },
+              {
+                "color": "rgba(28, 27, 31, 1)",
+                "writingDirection": "ltr",
+              },
+              [
+                {
+                  "fontFamily": "System",
+                  "fontSize": 24,
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 32,
+                },
+                {
+                  "marginBottom": 4,
+                },
+              ],
+            ]
+          }
+        >
+          Body Variants
+        </Text>
+        <View
+          style={
+            {
+              "gap": 8,
+            }
+          }
+        >
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 16,
+                    "fontWeight": "400",
+                    "letterSpacing": 0.15,
+                    "lineHeight": 24,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Body Large Text - This is a longer text to demonstrate the body text variant styling.
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 14,
+                    "fontWeight": "400",
+                    "letterSpacing": 0.25,
+                    "lineHeight": 20,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Body Medium Text - This is a longer text to demonstrate the body text variant styling.
+          </Text>
+          <Text
+            style={
+              [
+                {
+                  "textAlign": "left",
+                },
+                {
+                  "color": "rgba(28, 27, 31, 1)",
+                  "writingDirection": "ltr",
+                },
+                [
+                  {
+                    "fontFamily": "System",
+                    "fontSize": 12,
+                    "fontWeight": "400",
+                    "letterSpacing": 0.4,
+                    "lineHeight": 16,
+                  },
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Body Small Text - This is a longer text to demonstrate the body text variant styling.
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "marginBottom": 8,
+          }
+        }
+      >
+        <Text
+          style={
+            [
+              {
+                "textAlign": "left",
+              },
+              {
+                "color": "rgba(28, 27, 31, 1)",
+                "writingDirection": "ltr",
+              },
+              [
+                {
+                  "fontFamily": "System",
+                  "fontSize": 24,
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 32,
+                },
+                {
+                  "marginBottom": 4,
+                },
+              ],
+            ]
+          }
+        >
+          Custom Style
+        </Text>
+        <Text
+          style={
+            [
+              {
+                "textAlign": "left",
+              },
+              {
+                "color": "rgba(28, 27, 31, 1)",
+                "writingDirection": "ltr",
+              },
+              [
+                {
+                  "fontFamily": "System",
+                  "fontSize": 22,
+                  "fontWeight": "400",
+                  "letterSpacing": 0,
+                  "lineHeight": 28,
+                },
+                {
+                  "color": "#e91e63",
+                  "textAlign": "center",
+                },
+              ],
+            ]
+          }
+        >
+          Custom Styled Text
+        </Text>
+      </View>
+    </View>
+  </View>
+</RCTScrollView>
+`;

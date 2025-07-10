@@ -3915,7 +3915,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/fs-extra@npm:^11":
+"@types/fs-extra@npm:^11.0.4":
   version: 11.0.4
   resolution: "@types/fs-extra@npm:11.0.4"
   dependencies:
@@ -4027,6 +4027,15 @@ __metadata:
   dependencies:
     undici-types: "npm:~7.8.0"
   checksum: 04e4d11a711a683d6ed71f8db86b35035771ee9c1f110cb904ca67454d3478f19c71f1f0ccd0ba5350e5ce63bea70d08c569f798f6f5a5d2a1d05c038f1f729f
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^24.0.13":
+  version: 24.0.13
+  resolution: "@types/node@npm:24.0.13"
+  dependencies:
+    undici-types: ~7.8.0
+  checksum: a98c3c7979e3c17e2853af4b5c4adfb0cbeaf3747a85bc349048ec068cf16d2a96186e005b76ad05f8f533f9b067f499e45ff0296dab0111297af634f71c792c
   languageName: node
   linkType: hard
 
@@ -7927,8 +7936,9 @@ __metadata:
     "@storybook/test": ^8.6.14
     "@testing-library/jest-native": ^5.4.3
     "@testing-library/react-native": ^13.2.0
-    "@types/fs-extra": ^11
+    "@types/fs-extra": ^11.0.4
     "@types/jest": ^30.0.0
+    "@types/node": ^24.0.13
     "@types/react": ~19.0.10
     babel-loader: ^8.4.1
     dependency-cruiser: ^16.10.3

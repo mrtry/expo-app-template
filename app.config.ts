@@ -4,14 +4,14 @@ import { ExpoConfig } from 'expo/config';
 
 import { BuildEnvironment } from './config/types';
 
-const packageName = 'com.example.testapp';
+const packageName = 'com.expo.template';
 
 export default (): ExpoConfig => {
   const env = (process.env.APP_VARIANT as BuildEnvironment) || 'development';
 
   return {
-    name: 'my-test-app',
-    slug: 'my-test-app',
+    name: 'expo-app-template',
+    slug: 'expo-app-template',
     version: '1.0.0',
     orientation: 'portrait',
     scheme: 'expoapptemplate',
@@ -19,10 +19,10 @@ export default (): ExpoConfig => {
     platforms: ['ios', 'android'],
 
     android: {
-      package: 'com.example.testapp',
+      package: packageName,
     },
     ios: {
-      bundleIdentifier: 'com.example.testapp',
+      bundleIdentifier: packageName,
       infoPlist: {
         CFBundleLocalizations: ['ja'],
         CFBundleDevelopmentRegion: 'ja_JP',

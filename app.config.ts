@@ -7,7 +7,7 @@ import { BuildEnvironment } from './config/types';
 const packageName = 'com.expo.template';
 
 export default (): ExpoConfig => {
-  const env = (process.env.APP_VARIANT as BuildEnvironment) ?? 'development';
+  const env = (process.env.APP_VARIANT as BuildEnvironment) || 'development';
 
   return {
     name: 'expo-app-template',
@@ -15,7 +15,7 @@ export default (): ExpoConfig => {
     version: '1.0.0',
     orientation: 'portrait',
     scheme: 'expoapptemplate',
-    userInterfaceStyle: 'automatic',
+    userInterfaceStyle: 'light',
     platforms: ['ios', 'android'],
 
     android: {
@@ -29,6 +29,9 @@ export default (): ExpoConfig => {
       },
     },
 
+    extra: {
+      storybookEnabled: !!process.env.STORYBOOK_ENABLED,
+    },
     plugins: [
       ['./plugins/withAppVariant.ts', { env: env }],
 

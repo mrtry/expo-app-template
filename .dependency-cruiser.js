@@ -54,8 +54,7 @@ module.exports = {
      * # 4. 循環依存を禁止
      */
     {
-      comment:
-        '循環依存は、複雑で予測不可能なコードにつながる可能性があるため禁止されています。',
+      comment: '循環依存は、複雑で予測不可能なコードにつながる可能性があるため禁止されています。',
       from: {},
       name: 'no-circular-dependencies',
       severity: 'error',
@@ -69,16 +68,16 @@ module.exports = {
      */
     {
       comment:
-        "これは、他のどのモジュールからもインポートされていないモジュールを検出します。それらはデッドコード（不要なコード）である可能性があります。",
+        'これは、他のどのモジュールからもインポートされていないモジュールを検出します。それらはデッドコード（不要なコード）である可能性があります。',
       from: {
         orphan: true,
         pathNot: [
-            '(^|/)\\.[^/]+\\.(js|jsx|ts|tsx)$', // dotfiles
-            '\\.d\\.ts$', // type declaration files
-            '(^|/)vite-env\\.d\\.ts$', // vite env file
-            '\\.test\\.(js|jsx|ts|tsx)$', // test files
-            '\\.spec\\.(js|jsx|ts|tsx)$', // spec files
-            '\\.stories\\.(js|jsx|ts|tsx)$', // storybook files
+          '(^|/)\\.[^/]+\\.(js|jsx|ts|tsx)$', // dotfiles
+          '\\.d\\.ts$', // type declaration files
+          '(^|/)vite-env\\.d\\.ts$', // vite env file
+          '\\.test\\.(js|jsx|ts|tsx)$', // test files
+          '\\.spec\\.(js|jsx|ts|tsx)$', // spec files
+          '\\.stories\\.(js|jsx|ts|tsx)$', // storybook files
         ],
       },
       name: 'no-orphans',

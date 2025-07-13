@@ -1,8 +1,6 @@
 export default {
-  '*.{js,jsx,ts,tsx}': [
+  '**/*.{js,jsx,ts,tsx,json}': [
     () => 'yarn typecheck',
-    'prettier --write',
-    'eslint --fix',
+    () => 'yarn lint:fix',
   ],
-  '*.{json,md}': 'prettier --write',
 };

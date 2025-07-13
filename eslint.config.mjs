@@ -18,6 +18,7 @@ export default tsLintConfig(
       'metro.config.js',
       'babel.config.js',
       'eslint.config.mjs',
+      '.rnstorybook/storybook.requires.ts'
     ],
   },
 

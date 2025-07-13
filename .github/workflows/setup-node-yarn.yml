@@ -1,0 +1,30 @@
+name: Setup Node.js and Yarn
+
+on:
+  workflow_call:
+
+jobs:
+  setup:
+    name: Setup Node.js and Yarn
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version' # .node-version ファイルを参照
+
+      - name: Cache yarn dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.yarn/cache
+            **/node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile

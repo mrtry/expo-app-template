@@ -16,6 +16,9 @@ jobs:
         with:
           node-version-file: '.node-version' # .node-version ファイルを参照
 
+      - name: Enable Yarn
+        run: corepack enable
+
       - name: Cache yarn dependencies
         uses: actions/cache@v4
         with:
@@ -27,4 +30,4 @@ jobs:
             ${{ runner.os }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable

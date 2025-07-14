@@ -21,6 +21,8 @@ runs:
 
     - name: Load environment variables from .envrc
       uses: HatsuneMiku3939/direnv-action@v1
+      with:
+        export-to-github-env: true
 
     - name: Cache yarn dependencies
       uses: actions/cache@v4

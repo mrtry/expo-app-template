@@ -19,7 +19,7 @@
     "lint:prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,json}'",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "jest",
-    "prepare": "husky"
+    "postinstall": "husky && sb-rn-get-stories"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",

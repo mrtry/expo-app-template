@@ -19,6 +19,11 @@ jobs:
       - name: Enable Yarn
         run: corepack enable
 
+      - name: Set Yarn version from package.json
+        run: |
+          YARN_VERSION=$(node -p "require('./package.json').packageManager.split('@')[1]")
+          yarn set version $YARN_VERSION
+
       - name: Cache yarn dependencies
         uses: actions/cache@v4
         with:

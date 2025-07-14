@@ -19,11 +19,6 @@ runs:
         yarn set version $YARN_VERSION
       shell: bash
 
-    - name: Load environment variables from .envrc
-      uses: HatsuneMiku3939/direnv-action@v1
-      with:
-        export-to-github-env: true
-
     - name: Cache yarn dependencies
       uses: actions/cache@v4
       with:

@@ -1,0 +1,22 @@
+name: Lint and Typecheck
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+jobs:
+  lint_and_typecheck:
+    name: Lint and Typecheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js and Yarn
+        uses: ./.github/actions/setup-node-yarn
+
+      - name: Run lint and typecheck
+        run: yarn lint
+
+      - name: Run tests
+        run: yarn test

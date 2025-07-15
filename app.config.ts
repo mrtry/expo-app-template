@@ -1,3 +1,4 @@
+import 'ts-node/register';
 /* eslint perfectionist/sort-objects: off */
 
 import { ExpoConfig } from 'expo/config';

@@ -7,7 +7,11 @@ on:
 jobs:
   lint_and_typecheck:
     name: Lint and Typecheck
+    permissions:
+      contents: read
+      pull-requests: write
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,3 +24,7 @@ jobs:
 
       - name: Run tests
         run: yarn test
+
+      - uses: MH4GF/dependency-cruiser-report-action@v2
+        with:
+          cruise-script: yarn lint:dependency-graph

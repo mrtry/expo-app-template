@@ -24,6 +24,12 @@ export default tsLintConfig(
 
   ...expoConfig,
 
+  {
+    rules: {
+      'no-console': 'error',
+    },
+  },
+
   // --- perfectionist 推奨設定 ---
   perfectionistPlugin.configs['recommended-natural'],
 

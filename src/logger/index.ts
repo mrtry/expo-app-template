@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 export const Logger = {
   log(...args: unknown[]): void {
     console.log(...args);

@@ -36,14 +36,7 @@ export default tsLintConfig(
   // --- perfectionist カスタムルール ---
   {
     rules: {
-      'perfectionist/sort-objects': [
-        'error',
-        {
-          type: 'natural',
-          ignoreCase: true,
-          partitionByNewLine: true,
-        },
-      ],
+      'perfectionist/sort-objects': 'off',
       'perfectionist/sort-imports': 'off',
     },
   },
@@ -113,10 +106,12 @@ export default tsLintConfig(
           ignoreWords: ['src', 'components', '+not-found'],
         },
       ],
-      // ★ ここでは基本ルールのみを定義
+      // 基本のでィレクトリ名についてのrule
       'check-file/folder-naming-convention': [
         'error',
-        { 'src/**/': 'KEBAB_CASE' },
+        {
+          'src/**/': 'KEBAB_CASE'
+        },
         {
           ignoreWords: ['(authed)'],
         },
@@ -129,21 +124,36 @@ export default tsLintConfig(
     },
   },
 
-  // --- `components` フォルダ配下の命名規則を上書き ---
+  // --- `components` 以下はPascalCase ---
   {
     files: ['src/components/**/*', 'src/features/**/components/**/*'],
     plugins: { 'check-file': checkFilePlugin },
     rules: {
       'check-file/folder-naming-convention': [
         'error',
-        { 'src/features/**/components/**/*': 'PASCAL_CASE' },
+        { 'components/**/*': 'PASCAL_CASE' },
         {
-          ignoreWords: ['src', 'components'],
+          ignoreWords: ['__tests__'],
         },
       ],
     },
   },
-  // --- `index` ファイルを命名規則のチェックから除外 ---
+  // --- `hooks` 以下は、ファイル名/ディレクトリ名を useXxx とする--
+  {
+    files: ['src/**/hooks/**/*'],
+    plugins: { 'check-file': checkFilePlugin },
+    rules: {
+      'check-file/folder-naming-convention': [
+        'error',
+        { 'hooks/*': 'use[A-Z][a-zA-Z0-9]*' },
+      ],
+      'check-file/filename-naming-convention': [
+        'error',
+        { 'hooks/**/*.{js,jsx,ts,tsx}': 'use[A-Z][a-zA-Z0-9]*' },
+      ],
+    },
+  },
+  // --- `index` は、名規則のチェックから除外 ---
   {
     files: ['**/index.{js,jsx,ts,tsx}'],
     rules: {

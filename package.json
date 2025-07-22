@@ -3,7 +3,7 @@
   "main": "index.ts",
   "version": "1.0.0",
   "scripts": {
-    "start": "yarn start:app:development",
+    "start": "run-p start:app:development typesafe-i18n",
     "start:app:development": "APP_VARIANT=development expo start",
     "start:app:staging": "APP_VARIANT=staging expo start",
     "start:app:production": "APP_VARIANT=production expo start",
@@ -19,14 +19,19 @@
     "lint:prettier:fix": "prettier --write './**/*.{js,jsx,ts,tsx,json}'",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "jest",
-    "postinstall": "husky && sb-rn-get-stories"
+    "typesafe-i18n": "typesafe-i18n",
+    "postinstall": "husky && sb-rn-get-stories && typesafe-i18n --no-watch"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.1.0",
+    "@formatjs/intl-getcanonicallocales": "^2.5.5",
+    "@formatjs/intl-locale": "^4.2.11",
+    "@formatjs/intl-pluralrules": "^5.4.4",
     "@react-native-vector-icons/material-design-icons": "^12.0.1",
     "@react-navigation/bottom-tabs": "^7.3.10",
     "@react-navigation/elements": "^2.3.8",
     "@react-navigation/native": "^7.1.6",
+    "@tanstack/react-query": "^5.83.0",
     "expo": "~53.0.12",
     "expo-blur": "~14.1.5",
     "expo-constants": "~17.1.6",
@@ -36,7 +41,7 @@
     "expo-image": "~2.3.0",
     "expo-linking": "~7.1.5",
     "expo-router": "~5.1.0",
-    "expo-splash-screen": "~0.30.9",
+    "expo-splash-screen": "~0.30.10",
     "expo-status-bar": "~2.2.3",
     "expo-symbols": "~0.4.5",
     "expo-system-ui": "~5.0.9",
@@ -48,10 +53,10 @@
     "react-native-gesture-handler": "~2.24.0",
     "react-native-paper": "^5.14.5",
     "react-native-reanimated": "~3.17.4",
-    "react-native-safe-area-context": "^5.4.0",
+    "react-native-safe-area-context": "5.4.0",
     "react-native-screens": "~4.11.1",
-    "react-native-web": "~0.20.0",
-    "react-native-webview": "13.13.5"
+    "react-native-webview": "13.13.5",
+    "typesafe-i18n": "^5.26.2"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -88,6 +93,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-native": "^5.0.0",
     "eslint-plugin-unicorn": "^59.0.1",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^16.2.0",
     "husky": "^9.1.7",
     "jest": "^30.0.4",

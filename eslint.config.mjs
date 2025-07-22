@@ -6,6 +6,7 @@ import perfectionistPlugin from 'eslint-plugin-perfectionist';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import reactNativePlugin from 'eslint-plugin-react-native';
 import unicornPlugin from 'eslint-plugin-unicorn';
+import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 import { config as tsLintConfig, plugin as tsLintPlugin } from 'typescript-eslint';
 
@@ -67,6 +68,7 @@ export default tsLintConfig(
       'react-hooks': reactHooksPlugin,
       'react-native': reactNativePlugin,
       'unicorn': unicornPlugin,
+      'unused-imports': unusedImportsPlugin,
     },
     rules: {
       // ESLint Core Rules
@@ -79,6 +81,14 @@ export default tsLintConfig(
 
       // @typescript-eslint
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/no-unused-vars': 'off', // unused-importsプラグインを使用するため無効化
+
+      // eslint-plugin-unused-imports
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'warn',
+        { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+      ],
 
       // eslint-plugin-react
       'react/react-in-jsx-scope': 'off',

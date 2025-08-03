@@ -170,5 +170,12 @@ export default tsLintConfig(
       'check-file/filename-naming-convention': 'off',
     },
   },
+  // --- scripts ディレクトリでは no-console を無効化 ---
+  {
+    files: ['scripts/**/*'],
+    rules: {
+      'no-console': 'off',
+    },
+  },
   prettierConfig,
 );

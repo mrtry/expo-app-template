@@ -1,5 +1,5 @@
 #!/usr/bin/env zx
-
+/* eslint-disable no-undef */
 import fs from 'fs-extra';
 import path from 'path';
 import 'zx/globals';

@@ -17,7 +17,7 @@
  * - package.jsonの各startスクリプトで実行される
  */
 
-/* eslint-disable no-console, no-undef */
+/* eslint-disable no-undef */
 import 'zx/globals';
 
 /**

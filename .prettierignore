@@ -19,6 +19,7 @@ ios/Pods/
 # Generated files
 *.d.ts
 coverage/
+src/i18n/i18n-*
 
 # Logs
 *.log

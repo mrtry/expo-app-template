@@ -1,22 +1,37 @@
-import { ThemeProvider } from '@react-navigation/native';
-import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
+// polyfill
+import '@formatjs/intl-getcanonicallocales/polyfill';
+import '@formatjs/intl-locale/polyfill';
+import '@formatjs/intl-pluralrules/polyfill';
+
 import 'react-native-reanimated';
-import React from 'react';
-import { PaperProvider } from 'react-native-paper';
 
-import { NavigationTheme, PaperTheme } from '@/constants/Colors';
+import { SplashScreen, Stack } from 'expo-router';
 
-export const RootLayout = () => {
+import { ApplicationRoot } from '@/features/application/components/ApplicationRoot';
+import { useTranslation } from '@/i18n/utils/hooks';
+
+SplashScreen.preventAutoHideAsync().catch(() => {
+  // no-op
+});
+
+const ApplicationLayout = () => {
   return (
-    <PaperProvider theme={PaperTheme}>
-      <ThemeProvider value={NavigationTheme}>
-        <Stack>
-          <Stack.Screen name={'index'} />
-          <Stack.Screen name={'login'} />
-        </Stack>
-        <StatusBar style="auto" />
-      </ThemeProvider>
-    </PaperProvider>
+    <ApplicationRoot>
+      <RootLayout />
+    </ApplicationRoot>
   );
 };
+
+const RootLayout = () => {
+  const { translation } = useTranslation();
+
+  return (
+    <Stack>
+      <Stack.Screen name={'index'} options={{ title: translation.login.top.header() }} />
+      <Stack.Screen name={'login'} options={{ title: translation.login.login.header() }} />
+      <Stack.Screen name={'(authed)'} options={{ headerShown: false }} />
+    </Stack>
+  );
+};
+
+export default ApplicationLayout;

@@ -6,6 +6,7 @@ import perfectionistPlugin from 'eslint-plugin-perfectionist';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import reactNativePlugin from 'eslint-plugin-react-native';
 import unicornPlugin from 'eslint-plugin-unicorn';
+import unusedImportsPlugin from 'eslint-plugin-unused-imports';
 import globals from 'globals';
 import { config as tsLintConfig, plugin as tsLintPlugin } from 'typescript-eslint';
 
@@ -18,7 +19,8 @@ export default tsLintConfig(
       'metro.config.js',
       'babel.config.js',
       'eslint.config.mjs',
-      '.rnstorybook/storybook.requires.ts'
+      '.rnstorybook/storybook.requires.ts',
+      'src/i18n/i18n-*'
     ],
   },
 
@@ -36,14 +38,7 @@ export default tsLintConfig(
   // --- perfectionist カスタムルール ---
   {
     rules: {
-      'perfectionist/sort-objects': [
-        'error',
-        {
-          type: 'natural',
-          ignoreCase: true,
-          partitionByNewLine: true,
-        },
-      ],
+      'perfectionist/sort-objects': 'off',
       'perfectionist/sort-imports': 'off',
     },
   },
@@ -74,6 +69,7 @@ export default tsLintConfig(
       'react-hooks': reactHooksPlugin,
       'react-native': reactNativePlugin,
       'unicorn': unicornPlugin,
+      'unused-imports': unusedImportsPlugin,
     },
     rules: {
       // ESLint Core Rules
@@ -86,6 +82,14 @@ export default tsLintConfig(
 
       // @typescript-eslint
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+      '@typescript-eslint/no-unused-vars': 'off', // unused-importsプラグインを使用するため無効化
+
+      // eslint-plugin-unused-imports
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': [
+        'warn',
+        { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' },
+      ],
 
       // eslint-plugin-react
       'react/react-in-jsx-scope': 'off',
@@ -113,10 +117,12 @@ export default tsLintConfig(
           ignoreWords: ['src', 'components', '+not-found'],
         },
       ],
-      // ★ ここでは基本ルールのみを定義
+      // 基本のでィレクトリ名についてのrule
       'check-file/folder-naming-convention': [
         'error',
-        { 'src/**/': 'KEBAB_CASE' },
+        {
+          'src/**/': 'KEBAB_CASE'
+        },
         {
           ignoreWords: ['(authed)'],
         },
@@ -129,25 +135,47 @@ export default tsLintConfig(
     },
   },
 
-  // --- `components` フォルダ配下の命名規則を上書き ---
+  // --- `components` 以下はPascalCase ---
   {
     files: ['src/components/**/*', 'src/features/**/components/**/*'],
     plugins: { 'check-file': checkFilePlugin },
     rules: {
       'check-file/folder-naming-convention': [
         'error',
-        { 'src/features/**/components/**/*': 'PASCAL_CASE' },
+        { 'components/**/*': 'PASCAL_CASE' },
         {
-          ignoreWords: ['src', 'components'],
+          ignoreWords: ['__tests__'],
         },
       ],
     },
   },
-  // --- `index` ファイルを命名規則のチェックから除外 ---
+  // --- `hooks` 以下は、ファイル名/ディレクトリ名を useXxx とする--
+  {
+    files: ['src/**/hooks/**/*'],
+    plugins: { 'check-file': checkFilePlugin },
+    rules: {
+      'check-file/folder-naming-convention': [
+        'error',
+        { 'hooks/*': 'use[A-Z][a-zA-Z0-9]*' },
+      ],
+      'check-file/filename-naming-convention': [
+        'error',
+        { 'hooks/**/*.{js,jsx,ts,tsx}': 'use[A-Z][a-zA-Z0-9]*' },
+      ],
+    },
+  },
+  // --- `index` は、名規則のチェックから除外 ---
   {
     files: ['**/index.{js,jsx,ts,tsx}'],
     rules: {
       'check-file/filename-naming-convention': 'off',
+    },
+  },
+  // --- scripts ディレクトリでは no-console を無効化 ---
+  {
+    files: ['scripts/**/*'],
+    rules: {
+      'no-console': 'off',
     },
   },
   prettierConfig,

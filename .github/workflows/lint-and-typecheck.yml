@@ -24,7 +24,3 @@ jobs:
 
       - name: Run tests
         run: yarn test
-
-      - uses: MH4GF/dependency-cruiser-report-action@v2
-        with:
-          cruise-script: yarn lint:dependency-graph

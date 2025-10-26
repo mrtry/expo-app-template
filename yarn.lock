@@ -3467,6 +3467,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@storybook/react-dom-shim@npm:9.1.15":
+  version: 9.1.15
+  resolution: "@storybook/react-dom-shim@npm:9.1.15"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+    storybook: ^9.1.15
+  checksum: 10/09767a4e5acb7066d47a35dfb63614f5ee8a0329529767eac7ad4dab8f4c3567906fd9b77be1b2cb66cdfa8890eea193d40c6fa688b296bf0a9af32d0232f0ee
+  languageName: node
+  linkType: hard
+
 "@storybook/react-native-theming@npm:^9.0.18":
   version: 9.0.18
   resolution: "@storybook/react-native-theming@npm:9.0.18"
@@ -3476,6 +3487,18 @@ __metadata:
     react: "*"
     react-native: ">=0.57.0"
   checksum: 10/127658f7183b3795e6442a0c24185fbef4a496ff95a22aed22314b6b9d3bfce12169a1666b1440c875c65847284092f98b608870f390c3c02e7ede726b733ab1
+  languageName: node
+  linkType: hard
+
+"@storybook/react-native-theming@npm:^9.1.4":
+  version: 9.1.4
+  resolution: "@storybook/react-native-theming@npm:9.1.4"
+  dependencies:
+    polished: "npm:^4.3.1"
+  peerDependencies:
+    react: "*"
+    react-native: ">=0.57.0"
+  checksum: 10/cfd5c29cbfbf1c98443d146bc16eaf9cddb9f96dcb82aa8e351533c59f86d5e6715bd6f06e4f7d750705aa344cb5d760572c6314b050600eea9551e2ec9d43b1
   languageName: node
   linkType: hard
 
@@ -3499,13 +3522,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/react-native-ui@npm:^9.0.18":
-  version: 9.0.18
-  resolution: "@storybook/react-native-ui@npm:9.0.18"
+"@storybook/react-native-ui-common@npm:^9.1.4":
+  version: 9.1.4
+  resolution: "@storybook/react-native-ui-common@npm:9.1.4"
   dependencies:
-    "@storybook/react": "npm:^9.0.17"
-    "@storybook/react-native-theming": "npm:^9.0.18"
-    "@storybook/react-native-ui-common": "npm:^9.0.18"
+    "@storybook/react": "npm:^9.1.8"
+    "@storybook/react-native-theming": "npm:^9.1.4"
+    es-toolkit: "npm:^1.38.0"
+    fuse.js: "npm:^7.0.0"
+    memoizerific: "npm:^1.11.3"
+    polished: "npm:^4.3.1"
+    store2: "npm:^2.14.3"
+    ts-dedent: "npm:^2.2.0"
+  peerDependencies:
+    react: "*"
+    react-native: ">=0.57.0"
+    storybook: ">=9"
+  checksum: 10/40704d34fad3bc061d1b3d868699d7e868b33684b3ff30565421b57113969d0ceb31b3b2793d110f5a6a3d636ebea600d8db6d9513bbefc3e84c39097cfdcd6d
+  languageName: node
+  linkType: hard
+
+"@storybook/react-native-ui@npm:^9.1.4":
+  version: 9.1.4
+  resolution: "@storybook/react-native-ui@npm:9.1.4"
+  dependencies:
+    "@storybook/react": "npm:^9.1.8"
+    "@storybook/react-native-theming": "npm:^9.1.4"
+    "@storybook/react-native-ui-common": "npm:^9.1.4"
     es-toolkit: "npm:^1.38.0"
     fuse.js: "npm:^7.0.0"
     memoizerific: "npm:^1.11.3"
@@ -3519,20 +3562,20 @@ __metadata:
     react-native-reanimated: ">=3"
     react-native-safe-area-context: "*"
     react-native-svg: ">=14"
-    storybook: ^9.0.17
-  checksum: 10/fc75df5733b7b540dfea3f86de92b913aa0fe18255c676931b8481e41cbdeb19122d1cc18263d1743d6e7a2e5a543ae3920bfbb168a09f5605c4d3beda9e8ed9
+    storybook: ">=9"
+  checksum: 10/6a38869adf9e57059ecd4bd675411f4824ce48effe94100cbcb8dbe2d851aa950c4a857afc1d455d0150d85645cbe38febc1055c7137e94336d8b624b923978a
   languageName: node
   linkType: hard
 
-"@storybook/react-native@npm:^9.0.14":
-  version: 9.0.18
-  resolution: "@storybook/react-native@npm:9.0.18"
+"@storybook/react-native@npm:^9.1.4":
+  version: 9.1.4
+  resolution: "@storybook/react-native@npm:9.1.4"
   dependencies:
     "@storybook/global": "npm:^5.0.0"
-    "@storybook/react": "npm:^9.0.17"
-    "@storybook/react-native-theming": "npm:^9.0.18"
-    "@storybook/react-native-ui": "npm:^9.0.18"
-    "@storybook/react-native-ui-common": "npm:^9.0.18"
+    "@storybook/react": "npm:^9.1.8"
+    "@storybook/react-native-theming": "npm:^9.1.4"
+    "@storybook/react-native-ui": "npm:^9.1.4"
+    "@storybook/react-native-ui-common": "npm:^9.1.4"
     commander: "npm:^8.2.0"
     dedent: "npm:^1.5.1"
     deepmerge: "npm:^4.3.0"
@@ -3548,7 +3591,7 @@ __metadata:
     react-native-gesture-handler: ">=2"
     react-native-reanimated: ">=2"
     react-native-safe-area-context: "*"
-    storybook: ^9.0.17
+    storybook: ">=9"
   peerDependenciesMeta:
     "@gorhom/bottom-sheet":
       optional: true
@@ -3560,7 +3603,7 @@ __metadata:
       optional: true
   bin:
     sb-rn-get-stories: ./bin/get-stories.js
-  checksum: 10/df4e39f66a4aad86c799d8038d65db7ec7aa90138f5abe0f78a8ec53c0e18cefc79143665e716a5ec309159101145e679fe7c2838455de237fcee597c04fd148
+  checksum: 10/bbaa4ebfbcdaf0ea0af1b2d4fd15578fe37b2c8fe0907d2f12f24c8e6825045828ea0231aaedc6dd5d34db4046878019b8cdf3a7ec3a59eb176882c2add8d6f7
   languageName: node
   linkType: hard
 
@@ -3579,6 +3622,24 @@ __metadata:
     typescript:
       optional: true
   checksum: 10/534846b50b8490e88b6031cc998a0bc386c8785b0ca301798bbfe6bd90fdb1bc5ababccc942c6aaf3b10b58093c38c6e56cc18b5e29bf89ba67d24fd81eddde8
+  languageName: node
+  linkType: hard
+
+"@storybook/react@npm:^9.1.8":
+  version: 9.1.15
+  resolution: "@storybook/react@npm:9.1.15"
+  dependencies:
+    "@storybook/global": "npm:^5.0.0"
+    "@storybook/react-dom-shim": "npm:9.1.15"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+    storybook: ^9.1.15
+    typescript: ">= 4.9.x"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10/b6884e5c785e77c05cc2f20b921fc7613f5749c2e0c92731680c9cbcff85ab8ddc7cf2a47bd7afa9aef93fce1f675ab3d595a4476e9e7d158eda8145a72fc39c
   languageName: node
   linkType: hard
 
@@ -7762,7 +7823,7 @@ __metadata:
     "@storybook/addon-ondevice-actions": "npm:^9.0.14"
     "@storybook/addon-ondevice-controls": "npm:^9.0.14"
     "@storybook/react": "npm:^9.0.16"
-    "@storybook/react-native": "npm:^9.0.14"
+    "@storybook/react-native": "npm:^9.1.4"
     "@storybook/test": "npm:^8.6.14"
     "@tanstack/react-query": "npm:^5.83.0"
     "@testing-library/jest-native": "npm:^5.4.3"

@@ -1,0 +1,15 @@
+version: 2
+updates:
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      timezone: 'Asia/Tokyo'
+      time: '10:00'
+    ignore:
+      - dependency-name: 'expo*'
+      - dependency-name: '@expo/*'
+      - dependency-name: 'expo-*'
+    open-pull-requests-limit: 10
+    cooldown:
+      default-days: 7
